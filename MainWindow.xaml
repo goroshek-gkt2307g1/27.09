@@ -5,17 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_27._09"
         mc:Ignorable="d"
-        Title="MainWindow" Height="151" Width="226">
+        Title="MainWindow" Height="252" Width="253">
     <Grid>
-        <TextBlock Foreground="White" Height="150">
-            <TextBlock.Background>
-                <RadialGradientBrush>
-                    <GradientStop Color="DarkGreen" Offset="0" />
-                    <GradientStop Color="DarkBlue" Offset="0.5" />
-                    <GradientStop Color="DarkRed" Offset="1" />
+        <Ellipse Margin="10" Width="200" Height="200">
+            <Ellipse.Fill>
+                <RadialGradientBrush GradientOrigin="0.3,0.3">
+                    <GradientStop Color="White" Offset="0"></GradientStop>
+                    <GradientStop Color="Blue" Offset="1"></GradientStop>
                 </RadialGradientBrush>
-            </TextBlock.Background>
-            Кисть RadialGradientBrush
-        </TextBlock>
+            </Ellipse.Fill>
+        </Ellipse>
     </Grid>
 </Window>
