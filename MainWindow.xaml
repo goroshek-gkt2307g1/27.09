@@ -7,16 +7,11 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="252" Width="445">
     <Grid>
-        <TextBlock FontSize="100">
-            <TextBlock.Foreground>
-                <LinearGradientBrush>
-                    <GradientStop Color="Yellow" Offset="0.0" />
-                    <GradientStop Color="Red" Offset="0.2" />
-                    <GradientStop Color="Blue" Offset="0.7" />
-                    <GradientStop Color="LightGreen" Offset="1.0" />
-                </LinearGradientBrush>
-            </TextBlock.Foreground>
-Градиент
+        <TextBlock FontWeight="ExtraBold" Height="150">
+            <TextBlock.Background>
+                <ImageBrush Opacity="0.3" ImageSource="/pict.png" />
+            </TextBlock.Background>
+Кисть ImageBrush
         </TextBlock>
     </Grid>
 </Window>
