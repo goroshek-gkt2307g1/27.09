@@ -5,18 +5,53 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_27._09"
         mc:Ignorable="d"
-        Title="MainWindow" Height="252" Width="445">
+        Title="MainWindow" Height="350" Width="445">
     <Grid>
-        <StackPanel>
-            <TextBox Name="txt" FontSize="20">Пример отражения текстового поля</TextBox>
-            <Rectangle Height="20" Opacity="0.2" RenderTransformOrigin="0,0.5">
-                <Rectangle.Fill>
-                    <VisualBrush Visual="{Binding ElementName=txt}" />
-                </Rectangle.Fill>
-                <Rectangle.RenderTransform>
-                    <ScaleTransform ScaleY="-1"></ScaleTransform>
-                </Rectangle.RenderTransform>
-            </Rectangle>
-        </StackPanel>
+        <Grid VerticalAlignment="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Ellipse Name="ellipse" Grid.Row="0" Width="200" Height="200" 
+                     HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Ellipse.Fill>
+                    <RadialGradientBrush GradientOrigin="0.3,0.3" Center="0.5,0.5" RadiusX="0.5" RadiusY="0.5">
+                        <GradientStop Color="White" Offset="0"/>
+                        <GradientStop Color="Blue" Offset="1"/>
+                    </RadialGradientBrush>
+                </Ellipse.Fill>
+                <Ellipse.Triggers>
+                    <EventTrigger RoutedEvent="Window.Loaded">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <PointAnimation 
+                                    Storyboard.TargetName="ellipse"
+                                    Storyboard.TargetProperty="Fill.GradientOrigin"
+                                    From="0.2,0.2" To="0.8,0.8" 
+                                    Duration="0:0:4"
+                                    AutoReverse="True" 
+                                    RepeatBehavior="Forever"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Ellipse.Triggers>
+            </Ellipse>
+
+            <Ellipse x:Name="shadow_ellipse" Grid.Row="1" 
+                     Width="200" Height="50"
+                     HorizontalAlignment="Center"
+                     Opacity="0.4" RenderTransformOrigin="0.5,0.5">
+                <Ellipse.Fill>
+                    <VisualBrush Visual="{Binding ElementName=ellipse}"/>
+                </Ellipse.Fill>
+                <Ellipse.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="1" ScaleY="-0.3"/>
+                        <SkewTransform AngleX="0" AngleY="0"/>
+                    </TransformGroup>
+                </Ellipse.RenderTransform>
+            </Ellipse>
+        </Grid>
     </Grid>
 </Window>
