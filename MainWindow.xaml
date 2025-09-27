@@ -7,14 +7,20 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="394" Width="528">
     <Grid>
-        <Expander Margin="10" Header="Цвета">
-            <StackPanel Orientation="Vertical">
-                <Button Background="Red">Красный</Button>
-                <Button Background="Green">Зеленый</Button>
-                <Button Background="Blue">Синий</Button>
-                <Button Background="Yellow">Желтый</Button>
-                <Button Background="Brown">Коричневый</Button>
-            </StackPanel>
-        </Expander>
+        <TabControl>
+            <TabItem Header="Цвет">
+                <StackPanel Orientation="Vertical">
+                    <Button Background="Red">Красный</Button>
+                    <Button Background="Green">Зеленый</Button>
+                    <Button Background="Blue">Синий</Button>
+                    <Button Background="Yellow">Желтый</Button>
+                    <Button Background="Brown">Коричневый</Button>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="Шрифт">
+            </TabItem>
+            <TabItem Header="Фон">
+            </TabItem>
+        </TabControl>
     </Grid>
 </Window>
