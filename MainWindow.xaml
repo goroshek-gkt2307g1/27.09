@@ -5,19 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_27._09"
         mc:Ignorable="d"
-        Title="MainWindow" Height="394" Width="528">
-    <StackPanel>
-        <TextBlock>
+        Title="MainWindow" Height="151" Width="226">
+    <Grid>
+        <TextBlock Foreground="White" Height="150">
             <TextBlock.Background>
-                <SolidColorBrush Color="DarkGreen" />
+                <RadialGradientBrush>
+                    <GradientStop Color="DarkGreen" Offset="0" />
+                    <GradientStop Color="DarkBlue" Offset="0.5" />
+                    <GradientStop Color="DarkRed" Offset="1" />
+                </RadialGradientBrush>
             </TextBlock.Background>
-            <TextBlock.Foreground>
-                <SolidColorBrush Color="White"/>
-            </TextBlock.Foreground>
-            Кисть SolidColorBrush
+            Кисть RadialGradientBrush
         </TextBlock>
-        <!--<TextBlock Background="DarkGreen" Foreground="White"
-        Кисть SolidColorBrush
-        </TextBlock>-->
-    </StackPanel>
+    </Grid>
 </Window>
