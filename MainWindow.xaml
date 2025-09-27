@@ -7,28 +7,16 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="252" Width="445">
     <Grid>
-        <TabControl>
-            <TabItem>
-
-                <TabItem.Header>
-                    <Rectangle Width="50" Height="50">
-                        <Rectangle.Fill>
-                            <VisualBrush Visual="{Binding ElementName=colors}" />
-                        </Rectangle.Fill>
-                    </Rectangle>
-                </TabItem.Header>
-                <StackPanel Orientation="Vertical" x:Name="colors">
-                    <Button Background="Red">Красный</Button>
-                    <Button Background="Green">Зеленый</Button>
-                    <Button Background="Blue">Синий</Button>
-                    <Button Background="Yellow">Желтый</Button>
-                    <Button Background="Brown">Коричневый</Button>
-                </StackPanel>
-            </TabItem>
-            <TabItem Header="Шрифт">
-            </TabItem>
-            <TabItem Header="Фон">
-            </TabItem>
-        </TabControl>
+        <StackPanel>
+            <TextBox Name="txt" FontSize="20">Пример отражения текстового поля</TextBox>
+            <Rectangle Height="20" Opacity="0.2" RenderTransformOrigin="0,0.5">
+                <Rectangle.Fill>
+                    <VisualBrush Visual="{Binding ElementName=txt}" />
+                </Rectangle.Fill>
+                <Rectangle.RenderTransform>
+                    <ScaleTransform ScaleY="-1"></ScaleTransform>
+                </Rectangle.RenderTransform>
+            </Rectangle>
+        </StackPanel>
     </Grid>
 </Window>
