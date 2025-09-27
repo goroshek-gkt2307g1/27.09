@@ -5,17 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_27._09"
         mc:Ignorable="d"
-        Title="MainWindow" Height="252" Width="253">
+        Title="MainWindow" Height="252" Width="445">
     <Grid>
-        <TextBlock Foreground="White" Height="150">
-            <TextBlock.Background>
-                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
-                    <GradientStop Color="DarkGreen" Offset="0" />
-                    <GradientStop Color="DarkBlue" Offset="0.5" />
-                    <GradientStop Color="DarkRed" Offset="1" />
+        <TextBlock FontSize="100">
+            <TextBlock.Foreground>
+                <LinearGradientBrush>
+                    <GradientStop Color="Yellow" Offset="0.0" />
+                    <GradientStop Color="Red" Offset="0.2" />
+                    <GradientStop Color="Blue" Offset="0.7" />
+                    <GradientStop Color="LightGreen" Offset="1.0" />
                 </LinearGradientBrush>
-            </TextBlock.Background>
-Кисть LinearGradientBrush
+            </TextBlock.Foreground>
+Градиент
         </TextBlock>
     </Grid>
 </Window>
