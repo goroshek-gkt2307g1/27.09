@@ -7,11 +7,28 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="252" Width="445">
     <Grid>
-        <TextBlock FontWeight="ExtraBold" Height="150">
-            <TextBlock.Background>
-                <ImageBrush Opacity="0.3" ImageSource="/pict.png" />
-            </TextBlock.Background>
-Кисть ImageBrush
-        </TextBlock>
+        <TabControl>
+            <TabItem>
+
+                <TabItem.Header>
+                    <Rectangle Width="50" Height="50">
+                        <Rectangle.Fill>
+                            <VisualBrush Visual="{Binding ElementName=colors}" />
+                        </Rectangle.Fill>
+                    </Rectangle>
+                </TabItem.Header>
+                <StackPanel Orientation="Vertical" x:Name="colors">
+                    <Button Background="Red">Красный</Button>
+                    <Button Background="Green">Зеленый</Button>
+                    <Button Background="Blue">Синий</Button>
+                    <Button Background="Yellow">Желтый</Button>
+                    <Button Background="Brown">Коричневый</Button>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="Шрифт">
+            </TabItem>
+            <TabItem Header="Фон">
+            </TabItem>
+        </TabControl>
     </Grid>
 </Window>
