@@ -7,6 +7,14 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-
+        <ScrollViewer Width="200" Height="90">
+            <StackPanel Orientation="Vertical">
+                <Button Background="Red">Красный</Button>
+                <Button Background="Green">Зеленый</Button>
+                <Button Background="Blue">Синий</Button>
+                <Button Background="Yellow">Желтый</Button>
+                <Button Background="Brown">Коричневый</Button>
+            </StackPanel>
+        </ScrollViewer>
     </Grid>
 </Window>
