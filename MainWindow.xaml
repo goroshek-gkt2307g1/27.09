@@ -7,13 +7,15 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="252" Width="253">
     <Grid>
-        <Ellipse Margin="10" Width="200" Height="200">
-            <Ellipse.Fill>
-                <RadialGradientBrush GradientOrigin="0.3,0.3">
-                    <GradientStop Color="White" Offset="0"></GradientStop>
-                    <GradientStop Color="Blue" Offset="1"></GradientStop>
-                </RadialGradientBrush>
-            </Ellipse.Fill>
-        </Ellipse>
+        <TextBlock Foreground="White" Height="150">
+            <TextBlock.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Color="DarkGreen" Offset="0" />
+                    <GradientStop Color="DarkBlue" Offset="0.5" />
+                    <GradientStop Color="DarkRed" Offset="1" />
+                </LinearGradientBrush>
+            </TextBlock.Background>
+Кисть LinearGradientBrush
+        </TextBlock>
     </Grid>
 </Window>
