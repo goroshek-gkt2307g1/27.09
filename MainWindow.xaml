@@ -5,16 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_27._09"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="394" Width="528">
     <Grid>
-        <ScrollViewer Width="200" Height="90">
-            <StackPanel Orientation="Vertical">
-                <Button Background="Red">Красный</Button>
-                <Button Background="Green">Зеленый</Button>
-                <Button Background="Blue">Синий</Button>
-                <Button Background="Yellow">Желтый</Button>
-                <Button Background="Brown">Коричневый</Button>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="9*"/>
+            <ColumnDefinition Width="791*"/>
+        </Grid.ColumnDefinitions>
+        <Border BorderBrush="Navy" BorderThickness="4" CornerRadius="20" Padding="10" Margin="11,20,20,20" Grid.Column="1">
+            <StackPanel Orientation="Vertical" Background="White">
+                <Button>Красный</Button>
+                <Button>Зеленый</Button>
+                <Button>Синий</Button>
+                <Button>Желтый</Button>
+                <Button>Коричневый</Button>
             </StackPanel>
-        </ScrollViewer>
+        </Border>
     </Grid>
 </Window>
