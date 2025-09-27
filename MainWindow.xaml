@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="394" Width="528">
     <Grid>
-        <GroupBox Margin="10" Header="Цвета">
+        <Expander Margin="10" Header="Цвета">
             <StackPanel Orientation="Vertical">
                 <Button Background="Red">Красный</Button>
                 <Button Background="Green">Зеленый</Button>
@@ -15,6 +15,6 @@
                 <Button Background="Yellow">Желтый</Button>
                 <Button Background="Brown">Коричневый</Button>
             </StackPanel>
-        </GroupBox>
+        </Expander>
     </Grid>
 </Window>
