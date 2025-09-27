@@ -7,18 +7,14 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="394" Width="528">
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="9*"/>
-            <ColumnDefinition Width="791*"/>
-        </Grid.ColumnDefinitions>
-        <Border BorderBrush="Navy" BorderThickness="4" CornerRadius="20" Padding="10" Margin="11,20,20,20" Grid.Column="1">
-            <StackPanel Orientation="Vertical" Background="White">
-                <Button>Красный</Button>
-                <Button>Зеленый</Button>
-                <Button>Синий</Button>
-                <Button>Желтый</Button>
-                <Button>Коричневый</Button>
+        <GroupBox Margin="10" Header="Цвета">
+            <StackPanel Orientation="Vertical">
+                <Button Background="Red">Красный</Button>
+                <Button Background="Green">Зеленый</Button>
+                <Button Background="Blue">Синий</Button>
+                <Button Background="Yellow">Желтый</Button>
+                <Button Background="Brown">Коричневый</Button>
             </StackPanel>
-        </Border>
+        </GroupBox>
     </Grid>
 </Window>
